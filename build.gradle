@@ -7,6 +7,8 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        //spring auditing
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
     }
 }
 
@@ -14,6 +16,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+
+//spring Boot Overriding
+ext['hibernate.version'] = '5.2.11.Final'
 
 group = 'com.seungma93'
 version = '0.0.1-SNAPSHOT'
