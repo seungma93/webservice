@@ -1,6 +1,7 @@
-package com.seungma93.webservice.domain.posts;
+package com.seungma93.webservice.domain.posts.DTO;
 
 
+import com.seungma93.webservice.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
