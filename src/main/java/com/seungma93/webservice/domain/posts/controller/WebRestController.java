@@ -1,8 +1,10 @@
-package com.seungma93.webservice;
+package com.seungma93.webservice.domain.posts.controller;
 
+import com.seungma93.webservice.domain.posts.DTO.SignUpSaveRequestDto;
 import com.seungma93.webservice.domain.posts.PostsRepository;
-import com.seungma93.webservice.domain.posts.PostsSaveRequestDto;
-import com.seungma93.webservice.service.PostsService;
+import com.seungma93.webservice.domain.posts.DTO.PostsSaveRequestDto;
+import com.seungma93.webservice.domain.posts.service.PostsService;
+import com.seungma93.webservice.domain.posts.service.SignUpService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +17,7 @@ public class WebRestController {
 
     private PostsRepository postsRepository;
     private PostsService postsService;
+    private SignUpService signUpService;
 
     @GetMapping("/hello")
     public String hello()
@@ -26,4 +29,8 @@ public class WebRestController {
     public Long savePosts(@RequestBody PostsSaveRequestDto dto){
             return postsService.save(dto);
     }
+
+    @PostMapping("/signup")
+    public Long saveSignUp(@RequestBody SignUpSaveRequestDto dto){ return signUpService.save(dto);}
+
 }

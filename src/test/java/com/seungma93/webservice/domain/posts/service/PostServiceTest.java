@@ -1,9 +1,9 @@
-package com.seungma93.webservice.service;
+package com.seungma93.webservice.domain.posts.service;
 
 
 import com.seungma93.webservice.domain.posts.Posts;
 import com.seungma93.webservice.domain.posts.PostsRepository;
-import com.seungma93.webservice.domain.posts.PostsSaveRequestDto;
+import com.seungma93.webservice.domain.posts.DTO.PostsSaveRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
